@@ -43,8 +43,8 @@ public class MediaStream implements BirdsIPCamera.IPCameraCallBack {
     int bitrate;
     int mCameraId = Camera.CameraInfo.CAMERA_FACING_BACK;
     MediaCodec mMediaCodec;
-    SurfaceView mSurfaceView;
-    SurfaceHolder mSurfaceHolder;
+    //SurfaceView mSurfaceView;
+    //SurfaceHolder mSurfaceHolder;
     Camera mCamera;
     NV21Convertor mConvertor;
     private int mChannelState = 0;
@@ -65,10 +65,10 @@ public class MediaStream implements BirdsIPCamera.IPCameraCallBack {
     byte[] mMei = new byte[128];
     private boolean mPortraitScreen = true;
 
-    public MediaStream(Context context, SurfaceView mSurfaceView) {
+    public MediaStream(Context context) {
         mApplicationContext = context;
-        this.mSurfaceView = mSurfaceView;
-        mSurfaceHolder = mSurfaceView.getHolder();
+        //this.mSurfaceView = mSurfaceView;
+        //mSurfaceHolder = mSurfaceView.getHolder();
         mBirdsIPCamera = new BirdsIPCamera();
 //        audioStream = new AudioStream(mEasyIPCamera);
     }
@@ -156,7 +156,7 @@ public class MediaStream implements BirdsIPCamera.IPCameraCallBack {
 //                mCamera.setDisplayOrientation(displayRotation);
 //            }
 
-            mCamera.setPreviewDisplay(mSurfaceHolder);
+            //mCamera.setPreviewDisplay(mSurfaceHolder);
             return true;
         } catch (Exception e) {
             StringWriter sw = new StringWriter();

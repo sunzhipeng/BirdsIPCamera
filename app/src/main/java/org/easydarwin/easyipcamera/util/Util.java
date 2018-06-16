@@ -256,7 +256,7 @@ public class Util {
      */
     public static String getLocalIpAddress() {
         //获取wifi服务
-        WifiManager wifiManager = (WifiManager) BirdsApplication.getBirdsApplication().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+        WifiManager wifiManager = (WifiManager) BirdsApplication.getBirdsApplication().getSystemService(Context.WIFI_SERVICE);
         //判断wifi是否开启
         if (wifiManager.isWifiEnabled()) {
             WifiInfo wifiInfo = wifiManager.getConnectionInfo();
