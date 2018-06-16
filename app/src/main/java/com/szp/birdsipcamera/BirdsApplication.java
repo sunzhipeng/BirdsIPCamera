@@ -3,6 +3,7 @@ package com.szp.birdsipcamera;
 import android.app.Application;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import org.easydarwin.easyipcamera.config.Config;
 
@@ -12,12 +13,14 @@ import org.easydarwin.easyipcamera.config.Config;
 
 public class BirdsApplication extends Application {
 
+    private static final String TAG = "BirdsApplication";
     private static BirdsApplication mApplication;
 
     @Override
     public void onCreate() {
         super.onCreate();
         mApplication = this;
+        Log.d(TAG, "onCreate: Start Application");
     }
 
     public static BirdsApplication getBirdsApplication() {
